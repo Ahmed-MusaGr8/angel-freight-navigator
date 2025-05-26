@@ -1,45 +1,29 @@
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import QuoteForm from '@/components/QuoteForm';
-
 const Home = () => {
-  const trustSignals = [
-    "Licensed & Insured",
-    "24/7 Dispatch",
-    "Serving Canada & USA Since 2015"
-  ];
-
-  const services = [
-    {
-      title: "Full-Truckload (FTL)",
-      description: "Dedicated truck for your freight with direct delivery",
-      icon: "🚛"
-    },
-    {
-      title: "Less-Than-Truckload (LTL)",
-      description: "Cost-effective shipping for smaller loads",
-      icon: "📦"
-    },
-    {
-      title: "Cross-Border Shipping",
-      description: "Seamless Canada-USA freight transportation",
-      icon: "🌎"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const trustSignals = ["Licensed & Insured", "24/7 Dispatch", "Serving Canada & USA Since 2015"];
+  const services = [{
+    title: "Full-Truckload (FTL)",
+    description: "Dedicated truck for your freight with direct delivery",
+    icon: "🚛"
+  }, {
+    title: "Less-Than-Truckload (LTL)",
+    description: "Cost-effective shipping for smaller loads",
+    icon: "📦"
+  }, {
+    title: "Cross-Border Shipping",
+    description: "Seamless Canada-USA freight transportation",
+    icon: "🌎"
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/8f4f3fbc-0fbb-4010-b7f7-7a812a7e60c4.png')`
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/8f4f3fbc-0fbb-4010-b7f7-7a812a7e60c4.png')`
+      }} />
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -55,11 +39,9 @@ const Home = () => {
             
             {/* Trust Signals */}
             <div className="flex flex-wrap gap-4 text-sm">
-              {trustSignals.map((signal, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+              {trustSignals.map((signal, index) => <div key={index} className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                   ✓ {signal}
-                </div>
-              ))}
+                </div>)}
             </div>
             
             {/* CTA Buttons */}
@@ -67,9 +49,7 @@ const Home = () => {
               <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white px-8 py-4 text-lg font-semibold rounded-lg">
                 <Link to="/quote">Get a Free Quote</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-navy-900 px-8 py-4 text-lg font-semibold rounded-lg">
-                <Link to="/contact">Speak to an Expert</Link>
-              </Button>
+              
             </div>
             
             {/* Reviews */}
@@ -106,8 +86,7 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0">
+            {services.map((service, index) => <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0">
                 <CardContent className="p-8 text-center">
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-navy-900 mb-3">{service.title}</h3>
@@ -116,8 +95,7 @@ const Home = () => {
                     Learn More
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           
           <div className="text-center mt-12">
@@ -181,8 +159,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
