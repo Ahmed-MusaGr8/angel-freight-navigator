@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Clock, DollarSign, Users, Truck, Wrench, Headphones } from 'lucide-react';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const Careers = () => {
   const benefits = [
@@ -86,15 +87,15 @@ const Careers = () => {
             <div className="bg-primary-50 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">150+</div>
+                  <AnimatedCounter target={150} suffix="+" className="text-3xl font-bold text-primary mb-2" />
                   <div className="text-gray-600">Team Members</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">8</div>
+                  <AnimatedCounter target={8} className="text-3xl font-bold text-primary mb-2" />
                   <div className="text-gray-600">Years Growing</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">95%</div>
+                  <AnimatedCounter target={95} suffix="%" className="text-3xl font-bold text-primary mb-2" />
                   <div className="text-gray-600">Employee Retention</div>
                 </div>
                 <div>
@@ -119,7 +120,7 @@ const Careers = () => {
 
           <div className="space-y-6">
             {jobListings.map((job, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
                 <CardContent className="p-8">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex-1">

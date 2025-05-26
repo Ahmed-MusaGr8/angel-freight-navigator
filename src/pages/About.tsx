@@ -1,6 +1,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Award, Globe, Handshake } from 'lucide-react';
+import MilestoneAnimation from '@/components/MilestoneAnimation';
 
 const About = () => {
   const milestones = [
@@ -66,7 +67,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg">
+              <Card key={index} className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-primary" />
@@ -88,25 +89,7 @@ const About = () => {
             <p className="text-xl text-gray-600">Key milestones in our growth story</p>
           </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-200"></div>
-            
-            {milestones.map((milestone, index) => (
-              <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <Card className="border-0 shadow-lg">
-                    <CardContent className="p-6">
-                      <div className="text-2xl font-bold text-primary mb-2">{milestone.year}</div>
-                      <h3 className="text-lg font-semibold text-navy-900 mb-2">{milestone.event}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-                
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow-lg"></div>
-              </div>
-            ))}
-          </div>
+          <MilestoneAnimation milestones={milestones} />
         </div>
       </section>
 
@@ -120,7 +103,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {leadership.map((leader, index) => (
-              <Card key={index} className="text-center border-0 shadow-lg overflow-hidden">
+              <Card key={index} className="text-center border-0 shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="aspect-square">
                   <img 
                     src={leader.image} 

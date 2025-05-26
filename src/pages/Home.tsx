@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import QuoteForm from '@/components/QuoteForm';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const Home = () => {
   const trustSignals = ["Licensed & Insured", "24/7 Dispatch", "Serving Canada & USA Since 2015"];
@@ -164,11 +165,11 @@ const Home = () => {
             <div className="relative">
               <div className="bg-primary-50 rounded-2xl p-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">15,000+</div>
+                  <AnimatedCounter target={15000} suffix="+" className="text-4xl font-bold text-primary mb-2" />
                   <div className="text-gray-600 mb-6">Successful Deliveries</div>
                   <div className="text-4xl font-bold text-primary mb-2">24/7</div>
                   <div className="text-gray-600 mb-6">Customer Support</div>
-                  <div className="text-4xl font-bold text-primary mb-2">99.2%</div>
+                  <AnimatedCounter target={99.2} suffix="%" className="text-4xl font-bold text-primary mb-2" />
                   <div className="text-gray-600">Customer Satisfaction</div>
                 </div>
               </div>

@@ -2,13 +2,14 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Truck, Satellite, Shield, Clock, MapPin, Fuel } from 'lucide-react';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const Fleet = () => {
   const fleetStats = [
-    { icon: Truck, label: "Modern Trucks", value: "150+" },
-    { icon: Satellite, label: "GPS Tracked", value: "100%" },
-    { icon: Shield, label: "Safety Rating", value: "A+" },
-    { icon: Clock, label: "Uptime", value: "99.8%" }
+    { icon: Truck, label: "Modern Trucks", value: 150, suffix: "+" },
+    { icon: Satellite, label: "GPS Tracked", value: 100, suffix: "%" },
+    { icon: Shield, label: "Safety Rating", value: 0, suffix: "", displayValue: "A+" },
+    { icon: Clock, label: "Uptime", value: 99.8, suffix: "%" }
   ];
 
   const trucks = [
@@ -55,7 +56,13 @@ const Fleet = () => {
                 <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-primary" />
                 </div>
-                <div className="text-3xl font-bold text-navy-900 mb-2">{stat.value}</div>
+                <div className="text-3xl font-bold text-navy-900 mb-2">
+                  {stat.displayValue ? (
+                    stat.displayValue
+                  ) : (
+                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                  )}
+                </div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -77,7 +84,7 @@ const Fleet = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {trucks.map((truck, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <div className="aspect-video">
                   <img 
                     src={truck.image} 
