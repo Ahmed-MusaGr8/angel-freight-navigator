@@ -44,39 +44,39 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-navy-900 to-navy-700 text-white py-20">
+      <section className="bg-gradient-to-r from-navy-900 to-navy-700 text-white py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
             Comprehensive Logistics Solutions
           </h1>
-          <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
             From local deliveries to international shipping, we provide end-to-end logistics solutions 
             tailored to your business needs.
           </p>
-          <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white px-8 py-4">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
             <Link to="/quote">Get Custom Quote</Link>
           </Button>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white h-full">
                 <CardHeader className="text-center pb-4">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <CardTitle className="text-xl font-bold text-navy-900">{service.title}</CardTitle>
+                  <div className="text-4xl sm:text-5xl mb-4">{service.icon}</div>
+                  <CardTitle className="text-lg sm:text-xl font-bold text-navy-900 px-2">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-gray-600">{service.description}</p>
+                <CardContent className="space-y-4 flex flex-col h-full">
+                  <p className="text-gray-600 text-sm sm:text-base flex-1">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      <li key={featureIndex} className="flex items-center text-xs sm:text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
                         {feature}
                       </li>
                     ))}
@@ -92,64 +92,64 @@ const Services = () => {
       </section>
 
       {/* Why Choose Our Services */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Service Excellence Guaranteed
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Every service we provide is backed by our commitment to quality, safety, and customer satisfaction
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary">🛡️</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl sm:text-2xl text-primary">🛡️</span>
               </div>
-              <h3 className="font-semibold text-navy-900 mb-2">Fully Insured</h3>
-              <p className="text-gray-600 text-sm">Comprehensive cargo insurance on every shipment</p>
+              <h3 className="font-semibold text-navy-900 mb-2 text-sm sm:text-base">Fully Insured</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Comprehensive cargo insurance on every shipment</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary">📱</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl sm:text-2xl text-primary">📱</span>
               </div>
-              <h3 className="font-semibold text-navy-900 mb-2">Real-Time Tracking</h3>
-              <p className="text-gray-600 text-sm">Monitor your shipment 24/7 with GPS tracking</p>
+              <h3 className="font-semibold text-navy-900 mb-2 text-sm sm:text-base">Real-Time Tracking</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Monitor your shipment 24/7 with GPS tracking</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary">🎯</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl sm:text-2xl text-primary">🎯</span>
               </div>
-              <h3 className="font-semibold text-navy-900 mb-2">On-Time Delivery</h3>
-              <p className="text-gray-600 text-sm">98.5% on-time delivery rate guaranteed</p>
+              <h3 className="font-semibold text-navy-900 mb-2 text-sm sm:text-base">On-Time Delivery</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">98.5% on-time delivery rate guaranteed</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary">🏆</span>
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-xl sm:text-2xl text-primary">🏆</span>
               </div>
-              <h3 className="font-semibold text-navy-900 mb-2">Quality Service</h3>
-              <p className="text-gray-600 text-sm">Award-winning customer service team</p>
+              <h3 className="font-semibold text-navy-900 mb-2 text-sm sm:text-base">Quality Service</h3>
+              <p className="text-gray-600 text-xs sm:text-sm">Award-winning customer service team</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
+      <section className="py-12 sm:py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to Ship with Angel's Trucking?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Get a customized quote for your specific shipping needs and discover why thousands of businesses trust us with their freight.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4">
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               <Link to="/contact">Speak to Expert</Link>
             </Button>
           </div>
