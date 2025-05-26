@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import { MapPin, Navigation, Package, Weight, Ruler } from 'lucide-react';
 
 const QuoteForm = () => {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const QuoteForm = () => {
   };
 
   return (
-    <Card className="w-full max-w-md bg-white shadow-xl border-0">
+    <Card className="w-full bg-white shadow-xl border-0 rounded-2xl">
       <CardHeader className="pb-4">
         <CardTitle className="text-xl font-semibold text-navy-900">
           Calculate your shipment
@@ -39,30 +40,33 @@ const QuoteForm = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
+          <div className="relative">
+            <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               placeholder="From"
               value={formData.from}
               onChange={(e) => handleInputChange('from', e.target.value)}
-              className="border-gray-300 focus:border-primary"
+              className="pl-10 border-gray-300 focus:border-primary rounded-xl"
             />
           </div>
           
-          <div>
+          <div className="relative">
+            <Navigation className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               placeholder="Destination"
               value={formData.destination}
               onChange={(e) => handleInputChange('destination', e.target.value)}
-              className="border-gray-300 focus:border-primary"
+              className="pl-10 border-gray-300 focus:border-primary rounded-xl"
             />
           </div>
           
-          <div>
+          <div className="relative">
+            <Package className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
             <Select onValueChange={(value) => handleInputChange('type', value)}>
-              <SelectTrigger className="border-gray-300 focus:border-primary">
+              <SelectTrigger className="pl-10 border-gray-300 focus:border-primary rounded-xl">
                 <SelectValue placeholder="Type" />
               </SelectTrigger>
-              <SelectContent className="bg-white z-50">
+              <SelectContent className="bg-white z-50 rounded-xl">
                 <SelectItem value="ftl">Full Truckload (FTL)</SelectItem>
                 <SelectItem value="ltl">Less Than Truckload (LTL)</SelectItem>
                 <SelectItem value="expedited">Expedited</SelectItem>
@@ -71,27 +75,29 @@ const QuoteForm = () => {
             </Select>
           </div>
           
-          <div>
+          <div className="relative">
+            <Weight className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               placeholder="Weight (kg)"
               value={formData.weight}
               onChange={(e) => handleInputChange('weight', e.target.value)}
-              className="border-gray-300 focus:border-primary"
+              className="pl-10 border-gray-300 focus:border-primary rounded-xl"
             />
           </div>
           
-          <div>
+          <div className="relative">
+            <Ruler className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               placeholder="Dimensions (L x W x H)"
               value={formData.dimensions}
               onChange={(e) => handleInputChange('dimensions', e.target.value)}
-              className="border-gray-300 focus:border-primary"
+              className="pl-10 border-gray-300 focus:border-primary rounded-xl"
             />
           </div>
           
           <Button 
             type="submit" 
-            className="w-full bg-primary hover:bg-primary-600 text-white font-medium py-3 rounded-lg"
+            className="w-full bg-primary hover:bg-primary-600 text-white font-medium py-3 rounded-xl"
           >
             Calculate
           </Button>

@@ -1,7 +1,9 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link } from 'react-router-dom';
 import QuoteForm from '@/components/QuoteForm';
+
 const Home = () => {
   const trustSignals = ["Licensed & Insured", "24/7 Dispatch", "Serving Canada & USA Since 2015"];
   const services = [{
@@ -17,12 +19,13 @@ const Home = () => {
     description: "Seamless Canada-USA freight transportation",
     icon: "🌎"
   }];
+  
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image - Freight truck with green forest landscape */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/lovable-uploads/8f4f3fbc-0fbb-4010-b7f7-7a812a7e60c4.png')`
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1615729947596-a598e5de0ab3?w=1920&h=1080&fit=crop')`
       }} />
         
         {/* Content */}
@@ -44,30 +47,44 @@ const Home = () => {
                 </div>)}
             </div>
             
+            {/* Reviews - moved before CTA buttons */}
+            <div className="flex items-center space-x-4 pt-4">
+              <div className="flex -space-x-2">
+                <img 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=40&h=40&fit=crop&crop=face" 
+                  alt="Customer review" 
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=40&h=40&fit=crop&crop=face" 
+                  alt="Customer review" 
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" 
+                  alt="Customer review" 
+                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <div className="flex items-center space-x-1">
+                  <span className="text-yellow-400">★★★★★</span>
+                  <span className="text-sm text-gray-200 font-medium">4.9</span>
+                </div>
+                <span className="text-sm text-gray-300">from 873+ reviews</span>
+              </div>
+            </div>
+            
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild size="lg" className="bg-primary hover:bg-primary-600 text-white px-8 py-4 text-lg font-semibold rounded-lg">
                 <Link to="/quote">Get a Free Quote</Link>
               </Button>
-              
-            </div>
-            
-            {/* Reviews */}
-            <div className="flex items-center space-x-4 pt-4">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 bg-gray-300 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-gray-400 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-gray-500 rounded-full border-2 border-white"></div>
-              </div>
-              <div className="flex items-center space-x-1">
-                <span className="text-yellow-400">★★★★★</span>
-                <span className="text-sm text-gray-200">4.9 from 873+ reviews</span>
-              </div>
             </div>
           </div>
           
           {/* Right Column - Quote Form */}
-          <div className="lg:justify-self-end">
+          <div className="lg:justify-self-end w-full max-w-md lg:max-w-lg">
             <QuoteForm />
           </div>
         </div>
@@ -161,4 +178,5 @@ const Home = () => {
       </section>
     </div>;
 };
+
 export default Home;
