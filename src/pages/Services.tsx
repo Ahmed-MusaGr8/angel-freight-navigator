@@ -82,7 +82,7 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
-                    <Button className="w-full bg-primary hover:bg-primary-600 text-white">
+                    <Button variant="outline" className="w-full text-primary border-primary hover:bg-primary hover:text-white">
                       Learn More
                     </Button>
                   </div>
