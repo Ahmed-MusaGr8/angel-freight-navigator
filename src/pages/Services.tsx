@@ -82,7 +82,7 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
-                    <Button variant="outline" className="w-full text-primary border-primary hover:bg-primary hover:text-white">
+                    <Button className="w-full bg-primary hover:bg-primary-600 text-white">
                       Learn More
                     </Button>
                   </div>
@@ -148,10 +148,10 @@ const Services = () => {
             Get a customized quote for your specific shipping needs and discover why thousands of businesses trust us with their freight.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 hover:text-primary-600 px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+            <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100 hover:text-primary-600 px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               <Link to="/contact">Speak to Expert</Link>
             </Button>
           </div>
