@@ -17,19 +17,19 @@ const Fleet = () => {
       type: "Freightliner Cascadia",
       capacity: "80,000 lbs",
       features: ["GPS Tracking", "Temperature Control", "Load Monitoring"],
-      image: "https://images.unsplash.com/photo-1558618666-fbd019c10afc?w=800&h=600&fit=crop"
+      image: "/lovable-uploads/d471c2b8-88e3-4a70-915b-e570e41a2f19.png"
     },
     {
       type: "Volvo VNL",
       capacity: "80,000 lbs", 
       features: ["Advanced Safety", "Fuel Efficient", "Driver Comfort"],
-      image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800&h=600&fit=crop"
+      image: "/lovable-uploads/9fd5e1e5-f46c-481c-9d6b-06b114f6afd2.png"
     },
     {
       type: "Peterbilt 579",
       capacity: "80,000 lbs",
       features: ["Long Haul Optimized", "Aerodynamic Design", "Smart Technology"],
-      image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop"
+      image: "/lovable-uploads/b8f86701-7e5b-4bfa-acf1-ec7cceb1fed3.png"
     }
   ];
 
