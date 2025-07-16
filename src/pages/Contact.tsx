@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -47,8 +46,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Head Office",
-      details: ["1234 Transport Way", "Toronto, ON M1P 2V3"],
-      description: "Canada"
+      details: ["110-15397 117 Ave", "Edmonton, AB, Canada"],
+      description: "Alberta"
     },
     {
       icon: Clock,
@@ -185,11 +184,11 @@ const Contact = () => {
                 <CardContent className="p-8">
                   <h3 className="text-xl font-semibold text-navy-900 mb-4">Angel's Trucking Head Office</h3>
                   <div className="space-y-3 text-gray-600">
-                    <p>1234 Transport Way<br />Toronto, ON M1P 2V3<br />Canada</p>
+                    <p>110-15397 117 Ave<br />Edmonton, AB, Canada<br />Alberta</p>
                     <div className="pt-4 border-t border-gray-200">
                       <h4 className="font-semibold text-navy-900 mb-2">Directions</h4>
                       <p className="text-sm">
-                        Located in the heart of Toronto's logistics district, easily accessible from Highway 401 and 404. 
+                        Located in Edmonton's logistics district, easily accessible from major highways. 
                         Ample parking available for visitors and trucks.
                       </p>
                     </div>
