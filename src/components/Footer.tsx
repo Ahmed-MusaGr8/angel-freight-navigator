@@ -6,9 +6,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
+              <img 
+                src="/lovable-uploads/9fdd273c-8468-4100-9b36-bc184e545402.png" 
+                alt="Angel's Trucking Logo" 
+                className="h-10 w-auto"
+              />
               <span className="font-bold text-xl">Angel's Trucking</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
