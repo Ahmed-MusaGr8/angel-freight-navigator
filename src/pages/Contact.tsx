@@ -34,7 +34,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (416) 555-0123", "+1 (800) 555-ANGEL"],
+      details: ["(780) 707 - 8444"],
       description: "24/7 Dispatch Available"
     },
     {
