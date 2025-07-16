@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["info@angelstrucking.ca", "dispatch@angelstrucking.ca"],
+      details: ["info@angelstrucking.com"],
       description: "Response within 2 hours"
     },
     {
